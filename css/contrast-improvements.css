@@ -1,0 +1,208 @@
+/* ============================================
+   AIGRIT - Enhanced Text Contrast
+   Improvements for better visibility
+   ============================================ */
+
+/* Darken all body text for maximum visibility */
+body {
+    color: #1a1a1a !important;
+    font-weight: 500;
+}
+
+/* Increase paragraph text visibility */
+p, span, li {
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+/* Enhanced heading visibility */
+h1, h2, h3, h4, h5, h6 {
+    color: #0a0a0a;
+    font-weight: 700;
+}
+
+/* Feature card text improvements */
+.feature-card p,
+.info-card p,
+.tech-item p {
+    color: #333333 !important;
+    font-weight: 600 !important;
+}
+
+/* FAQ answer visibility */
+.faq-answer {
+    color: #1a1a1a !important;
+    font-weight: 600 !important;
+}
+
+.faq-question {
+    color: #0a0a0a !important;
+    font-weight: 700 !important;
+}
+
+/* Footer text improvements */
+.footer-section p,
+.footer-section li {
+    color: #f5f5f5 !important;
+    font-weight: 600 !important;
+}
+
+/* Section subtitles */
+.section-subtitle {
+    color: #333333 !important;
+    font-weight: 600 !important;
+}
+
+/* CTA and hero text */
+.cta p,
+.hero-content p {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact section text */
+.contact-item p {
+    color: #333333 !important;
+    font-weight: 600 !important;
+}
+
+.contact-info p {
+    color: #1a1a1a !important;
+    font-weight: 600 !important;
+}
+
+/* Product and service card text */
+.product-card p,
+.service-card p {
+    color: #333333 !important;
+    font-weight: 500 !important;
+}
+
+.product-info .description {
+    color: #333333 !important;
+    font-weight: 500 !important;
+}
+
+/* Form labels and text */
+label {
+    color: #0a0a0a !important;
+    font-weight: 700 !important;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    color: #1a1a1a !important;
+    font-weight: 500 !important;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888 !important;
+    font-weight: 500 !important;
+}
+
+/* Navigation links */
+.nav-links a {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+.logo h1,
+.logo .tagline {
+    color: #ffd700 !important;
+    font-weight: 700 !important;
+}
+
+/* Link colors for better visibility */
+a {
+    font-weight: 600 !important;
+}
+
+.info-card a,
+.contact-item a,
+.footer-section a {
+    color: #ff6b35 !important;
+    font-weight: 700 !important;
+    text-decoration: underline;
+}
+
+/* Table text */
+table {
+    color: #1a1a1a;
+}
+
+th {
+    color: #0a0a0a;
+    font-weight: 700;
+}
+
+td {
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+/* Blockquotes and emphasis */
+strong, b {
+    color: #0a0a0a !important;
+    font-weight: 700 !important;
+}
+
+em, i {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+/* Timeline and special sections */
+.timeline p {
+    color: #1a1a1a !important;
+    font-weight: 500 !important;
+}
+
+.timeline h4 {
+    color: #D4A373 !important;
+    font-weight: 700 !important;
+}
+
+/* Testimonial text */
+.testimonial p,
+[class*="testimonial"] p {
+    color: #1a1a1a !important;
+    font-weight: 600 !important;
+}
+
+/* All text inside colored backgrounds */
+[style*="background: linear-gradient"] p,
+[style*="background-color: #2C1810"] p,
+[style*="background-color: var(--secondary-color)"] p {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* Ensure visibility in all contexts */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #e0e0e0 !important;
+    }
+    
+    p, span, li {
+        color: #e0e0e0 !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #ffffff !important;
+    }
+}
+
+/* Print optimization */
+@media print {
+    p, span, li {
+        color: #000000 !important;
+        font-weight: 600 !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #000000 !important;
+    }
+}

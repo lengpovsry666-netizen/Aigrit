@@ -1,0 +1,750 @@
+/* ============================================
+   AIGRIT - Responsive Design
+   Mobile-First Approach
+   ============================================ */
+
+/* ============================================
+   TABLETS (768px and up)
+   ============================================ */
+
+@media (max-width: 768px) {
+    :root {
+        --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Logo with Earth SVG */
+    .logo {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.8rem !important;
+    }
+
+    .logo svg {
+        width: 50px !important;
+        height: 50px !important;
+        flex-shrink: 0;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo .tagline {
+        font-size: 0.8rem;
+    }
+
+    /* Navigation */
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--secondary-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1rem;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hero Section */
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 4rem 1rem;
+        min-height: auto;
+        gap: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .drone-animation {
+        height: 300px;
+    }
+
+    .drone {
+        width: 100px;
+        height: 70px;
+    }
+
+    /* Features Section */
+    .features {
+        padding: 3rem 1rem;
+    }
+
+    .features h2 {
+        font-size: 1.8rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Technology Section */
+    .technology {
+        padding: 3rem 1rem;
+    }
+
+    .technology h2 {
+        font-size: 1.8rem;
+    }
+
+    .tech-features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Company Info */
+    .company-info {
+        padding: 3rem 1rem;
+    }
+
+    .company-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* CTA Section */
+    .cta {
+        padding: 3rem 1rem;
+    }
+
+    .cta h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta p {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* ============================================
+   SMALL PHONES (480px and below)
+   ============================================ */
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    /* Navigation */
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    /* Logo with Earth SVG */
+    .logo {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+    }
+
+    .logo svg {
+        width: 40px !important;
+        height: 40px !important;
+        flex-shrink: 0;
+    }
+
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .logo .tagline {
+        display: none;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Floating Drone - Mobile */
+    .floating-drone-wrapper {
+        min-height: 120px;
+    }
+
+    .floating-drone {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    /* Floating Clouds - Mobile */
+    .floating-cloud {
+        width: 50px !important;
+        height: 30px !important;
+    }
+
+    .cloud-left {
+        left: -35px;
+        top: 20px;
+    }
+
+    .cloud-right {
+        right: -35px;
+        top: 35px;
+    }
+
+    .cloud-top {
+        left: 50%;
+        top: -30px;
+        transform: translateX(-50%);
+    }
+
+    .hero-right {
+        gap: 1.5rem;
+    }
+
+    .hero-right .cubes-container {
+        gap: 1.5rem;
+        min-height: 250px;
+    }
+
+    .cube {
+        width: 70px;
+        height: 70px;
+    }
+
+    .cube-face {
+        width: 70px;
+        height: 70px;
+        font-size: 1.2rem;
+    }
+
+    .cube-front {
+        transform: rotateY(0deg) translateZ(35px);
+    }
+
+    .cube-back {
+        transform: rotateY(180deg) translateZ(35px);
+    }
+
+    .cube-right {
+        transform: rotateY(90deg) translateZ(35px);
+    }
+
+    .cube-left {
+        transform: rotateY(-90deg) translateZ(35px);
+    }
+
+    .cube-top {
+        transform: rotateX(90deg) translateZ(35px);
+    }
+
+    .cube-bottom {
+        transform: rotateX(-90deg) translateZ(35px);
+    }
+
+    /* Sections */
+    .features {
+        padding: 2rem 1rem;
+    }
+
+    .features h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .feature-card p {
+        font-size: 0.9rem;
+    }
+
+    .technology {
+        padding: 2rem 1rem;
+    }
+
+    .technology h2 {
+        font-size: 1.5rem;
+    }
+
+    .technology > p {
+        font-size: 0.95rem;
+    }
+
+    .tech-item {
+        padding: 1.5rem 1rem;
+    }
+
+    .tech-item h4 {
+        font-size: 1.1rem;
+    }
+
+    .company-info {
+        padding: 2rem 1rem;
+    }
+
+    .company-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .info-card {
+        padding: 1.5rem;
+    }
+
+    .info-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .info-card p {
+        font-size: 0.9rem;
+    }
+
+    .cta {
+        padding: 2rem 1rem;
+    }
+
+    .cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta p {
+        font-size: 0.9rem;
+    }
+
+    .btn-large {
+        padding: 0.75rem 2rem;
+        font-size: 0.95rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 2rem 1rem 0.5rem;
+    }
+
+    .footer-content {
+        gap: 1rem;
+    }
+
+    .footer-section h4 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-section p,
+    .footer-section ul {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+        padding-top: 1rem;
+    }
+}
+
+/* ============================================
+   LARGE SCREENS (1920px and up)
+   ============================================ */
+
+@media (min-width: 1920px) {
+    :root {
+        --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .features h2,
+    .technology h2,
+    .company-info h2,
+    .cta h2 {
+        font-size: 3rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+    .navbar,
+    .cta-buttons,
+    .footer,
+    .menu-toggle {
+        display: none;
+    }
+
+    .hero {
+        background: white;
+        color: black;
+    }
+
+    .hero-content h1 {
+        color: var(--secondary-color);
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY - DARK MODE
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light-bg: #1A0F0A;
+        --text-dark: #FFF8F3;
+    }
+
+    body {
+        background-color: var(--dark-bg);
+    }
+
+    .feature-card,
+    .info-card {
+        background-color: #2C1810;
+        color: var(--text-light);
+    }
+
+    .feature-card p,
+    .info-card p {
+        color: #CCC;
+    }
+
+    .company-info {
+        background-color: #2C1810;
+        color: var(--text-light);
+    }
+
+    .company-info h2 {
+        color: var(--primary-color);
+    }
+}
+
+/* ============================================
+   LANDSCAPE ORIENTATION (Mobile)
+   ============================================ */
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: 400px;
+        padding: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .drone-animation {
+        height: 200px;
+    }
+}
+
+/* ============================================
+   MOBILE PHONES (480px and below)
+   ============================================ */
+@media (max-width: 480px) {
+    /* Heading Color Changes for Mobile */
+    .features h2 {
+        color: #000000 !important;
+    }
+
+    .company-info h2 {
+        color: #2C1810 !important;
+    }
+
+    .company-info h3 {
+        color: #2C1810 !important;
+    }
+
+    /* Products Section - Brown headings */
+    .products-section h2 {
+        color: #2C1810 !important;
+    }
+
+    /* Services Section - Black headings */
+    .services-section h2 {
+        color: #000000 !important;
+    }
+
+    /* Contact Section - Black headings */
+    .contact-section h2 {
+        color: #000000 !important;
+    }
+
+    .contact-section h3 {
+        color: #000000 !important;
+    }
+
+    /* Contact Information - Black text */
+    .contact-info h3 {
+        color: #000000 !important;
+    }
+
+    .contact-info p {
+        color: #000000 !important;
+    }
+
+    /* Footer links - Black text */
+    .footer-section h4 {
+        color: #000000 !important;
+    }
+
+    .footer-section p {
+        color: #000000 !important;
+    }
+
+    .footer-section a {
+        color: #000000 !important;
+    }
+
+    /* Core Values Section - Black Text for Mobile */
+    .features-grid .feature-card h3 {
+        color: #000000 !important;
+    }
+
+    .features-grid .feature-card p {
+        color: #000000 !important;
+    }
+
+    /* Ensure proper spacing on mobile */
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Improve button spacing on mobile */
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    /* Improve card spacing */
+    .feature-card,
+    .service-card,
+    .product-card,
+    .info-card {
+        padding: 1.5rem 1rem;
+        margin: 0.5rem 0;
+    }
+
+    /* Ensure navigation is accessible */
+    .menu-toggle {
+        display: block;
+        z-index: 1000;
+    }
+
+    /* Better form spacing on mobile */
+    input,
+    textarea,
+    select {
+        padding: 0.7rem;
+        font-size: 16px;
+    }
+
+    /* Improve table scrolling on mobile */
+    table {
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   MEDIUM PHONES & SMALL TABLETS (481px - 768px)
+   ============================================ */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+
+    /* Grid adjustments for tablets */
+    .features-grid,
+    .services-grid,
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   LARGE TABLETS & SMALL DESKTOPS (769px - 1023px)
+   ============================================ */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .container {
+        max-width: 95%;
+    }
+
+    .features-grid,
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ============================================
+   DESKTOPS (1024px - 1919px)
+   ============================================ */
+@media (min-width: 1024px) and (max-width: 1919px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
+
+/* ============================================
+   LARGE DESKTOPS (1920px+)
+   ============================================ */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    body {
+        font-size: 17px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Better spacing on ultra-wide screens */
+    section {
+        padding: 6rem 2rem;
+    }
+}
+
+/* ============================================
+   MOBILE FOOTER STYLING (480px and below)
+   ============================================ */
+@media (max-width: 480px) {
+    /* Footer section headings and text to white */
+    .footer-section h4 {
+        color: white !important;
+    }
+
+    .footer-section p {
+        color: white !important;
+    }
+
+    .footer-section a {
+        color: white !important;
+    }
+
+    .footer-section ul li a {
+        color: white !important;
+    }
+
+    /* Make all .section-title h2 elements with inline color white override to black */
+    h2.section-title[style*="color: white"] {
+        color: #000000 !important;
+    }
+}

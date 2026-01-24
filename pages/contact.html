@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Aigrit - AI Autonomous Drone Delivery Bread Service">
+    <title>Contact Us - Aigrit</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style>
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            min-width: 50px;
+        }
+
+        .contact-item h3 {
+            color: #2C1810;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .contact-item a {
+            color: #D4A373;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #FF6B35;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2C1810;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #E0E0E0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #D4A373;
+            box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background-color: #D4A373;
+            color: #2C1810;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .submit-btn:hover {
+            background-color: #E8B896;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 163, 115, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-card {
+            background: linear-gradient(135deg, #FFF8F3, white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid #D4A373;
+        }
+
+        .social-card a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: #D4A373;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+        }
+
+        .social-card a:hover {
+            background-color: #FF6B35;
+            transform: translateY(-3px);
+        }
+
+        .faq-section {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #E0E0E0;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            color: #2C1810;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-question:hover {
+            color: #D4A373;
+        }
+
+        .faq-toggle {
+            color: #D4A373;
+            font-size: 1.2rem;
+        }
+
+        .faq-answer {
+            color: #666;
+            display: none;
+            margin-top: 0.75rem;
+            line-height: 1.6;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" style="text-decoration: none; color: inherit;">
+                <div class="logo" style="position: relative; display: flex; align-items: center; gap: 1rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60" style="animation: float 3s ease-in-out infinite; flex-shrink: 0;">
+                        <!-- Earth sphere -->
+                        <defs>
+                            <radialGradient id="earthGradient" cx="35%" cy="35%">
+                                <stop offset="0%" style="stop-color:#4A9FD8;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#2E5F8A;stop-opacity:1" />
+                            </radialGradient>
+                            <style>
+                                @keyframes float {
+                                    0%, 100% { transform: translateY(0px); }
+                                    50% { transform: translateY(-20px); }
+                                }
+                            </style>
+                        </defs>
+                        <!-- Main sphere -->
+                        <circle cx="50" cy="50" r="48" fill="url(#earthGradient)" stroke="#1a3a52" stroke-width="2"/>
+                        <!-- Land masses (simplified) -->
+                        <path d="M 30 40 Q 35 35 45 38 T 55 42 Q 50 48 45 50 Q 35 48 30 40" fill="#2D7D34" opacity="0.8"/>
+                        <path d="M 60 55 Q 70 52 75 60 Q 70 70 65 68 Q 60 65 60 55" fill="#2D7D34" opacity="0.8"/>
+                        <!-- Clouds -->
+                        <ellipse cx="40" cy="30" rx="12" ry="8" fill="white" opacity="0.3"/>
+                        <ellipse cx="70" cy="45" rx="10" ry="6" fill="white" opacity="0.2"/>
+                        <!-- Shine/highlight -->
+                        <ellipse cx="35" cy="35" rx="15" ry="20" fill="white" opacity="0.15"/>
+                    </svg>
+                    <div>
+                        <h1>Aigrit</h1>
+                        <p class="tagline">AI Drone Bakery Delivery</p>
+                    </div>
+                </div>
+            </a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(135deg, #2C1810 0%, #3D2416 100%); min-height: 300px; grid-template-columns: 1fr;">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our team. We're here to help!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-container">
+        <h2 class="section-title" style="color: white;">Get In Touch</h2>
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <form id="contactForm" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="099 999 9999">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="order">Order Issue</option>
+                        <option value="delivery">Delivery Problem</option>
+                        <option value="partnership">Partnership Opportunity</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required placeholder="Tell us how we can help..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+                <p style="color: #999; font-size: 0.9rem; margin-top: 1rem;">We'll get back to you within 24 hours</p>
+            </form>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h3 style="color: white; font-size: 1.5rem; margin-bottom: 1rem;">Contact Information</h3>
+
+                <div class="contact-item">
+                    <div>
+                        <h3 style="color: white;">Phone</h3>
+                        <p style="font-weight: 600;"><a href="tel:+855994997046">099 499 7046</a></p>
+                        <p style="font-size: 0.9rem; color: #555; font-weight: 500;">Available 24/7</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div>
+                        <h3 style="color: white;">Email</h3>
+                        <p style="font-weight: 600;"><a href="mailto:lengpovsry666@gmail.com">lengpovsry666@gmail.com</a></p>
+                        <p style="font-size: 0.9rem; color: #555; font-weight: 500;">Response within 24 hours</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div>
+                        <h3 style="color: white;">Location</h3>
+                        <p>Phnom Penh, Cambodia</p>
+                        <p style="font-size: 0.9rem; color: #999;">Service coverage across central Phnom Penh</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div>
+                        <h3 style="color: white;">Leadership</h3>
+                        <p><strong>CEO & Founder:</strong> Leng Peou Sry</p>
+                        <p style="font-size: 0.9rem; color: #999;">Vision: Revolutionize bread delivery with AI</p>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div style="margin-top: 2rem;">
+                    <h3 style="color: white; margin-bottom: 1rem;">Follow Us</h3>
+                    <div class="social-grid">
+                    <div class="social-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <a href="https://www.facebook.com/L.P.Sry" target="_blank" rel="noopener noreferrer" title="Follow us on Facebook" style="perspective: 1000px; display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: linear-gradient(135deg, #1877F2, #0A66C2); border-radius: 8px; color: white; font-weight: bold; font-size: 1.5rem; transform-style: preserve-3d; animation: rotate-facebook 8s infinite linear; box-shadow: 0 8px 20px rgba(24, 119, 242, 0.3);">f</a>
+                            <p style="color: #2C1810; font-weight: 600;">Facebook</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="padding: 5rem 2rem; background: linear-gradient(135deg, #FFF8F3, white); max-width: 1200px; margin: 0 auto; width: 100%;">
+        <h2 class="section-title" style="color: #2C1810;">Frequently Asked Questions</h2>
+        <div class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(0)">
+                    <span>What areas do you deliver to?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    We currently operate across central and south Phnom Penh including Khan Toul Kouk, Khan Chamcarmon, Khan Doun Penh, and Khan Prampi Makara. We're expanding to new areas monthly. You can check if your address is in our service zone using our app.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(1)">
+                    <span>How long does delivery take?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Standard delivery takes 25-30 minutes from order placement. Our AI optimizes routes to ensure the fastest possible delivery while maintaining the highest quality of our products. Express deliveries are available during peak hours.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(2)">
+                    <span>How much does delivery cost?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Delivery fees range from $1.50 to $3.00 depending on your location and order value. Subscription members enjoy free delivery on all orders. Orders above certain values also qualify for free delivery.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(3)">
+                    <span>Are the drones safe?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Absolutely! Our drones are equipped with advanced safety systems including collision avoidance, redundant sensors, and automatic return-to-base capabilities. They undergo rigorous testing and comply with all local regulations. Your safety is our top priority.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(4)">
+                    <span>What payment methods do you accept?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    We accept all major credit cards, debit cards, mobile wallets (ABA, ACLEDA), and bank transfers. All payments are secured with encryption technology to protect your financial information.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(5)">
+                    <span>Can I track my delivery?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! Our mobile app provides real-time GPS tracking of your drone delivery. You can see your drone's exact location, estimated arrival time, and even receive notifications as it approaches your address.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(6)">
+                    <span>What if there's an issue with my order?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Customer satisfaction is our priority. If there's any issue with your order, contact our support team immediately via phone, email, or the app. We offer replacements or refunds for unsatisfactory orders within 24 hours.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(7)">
+                    <span>Do you offer corporate/bulk orders?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! We provide special B2B services for offices, hotels, restaurants, and events. Contact our corporate team for customized quotes, bulk pricing, and dedicated account management.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Have More Questions?</h2>
+        <p>We're here to help. Fill out the form above or reach out directly</p>
+        <button class="btn btn-primary btn-large" onclick="document.getElementById('contactForm').scrollIntoView({behavior: 'smooth'})">Send Message</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Aigrit</h4>
+                <p>AI Autonomous Drone Delivery for Premium Bread</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Phone: <a href="tel:+855994997046">099 499 7046</a></p>
+                <p>Email: <a href="mailto:lengpovsry666@gmail.com">lengpovsry666@gmail.com</a></p>
+                <p>Location: Phnom Penh, Cambodia</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/L.P.Sry" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="perspective: 1000px; display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: linear-gradient(135deg, #1877F2, #0A66C2); border-radius: 8px; color: white; font-weight: bold; font-size: 1.5rem; transform-style: preserve-3d; animation: rotate-facebook 8s infinite linear; box-shadow: 0 8px 20px rgba(24, 119, 242, 0.3);">f</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aigrit. All rights reserved. | CEO & Founder: Leng Peou Sry</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Validate form
+            const errors = validateContactForm({ name, email, phone, message });
+
+            if (errors.length > 0) {
+                errors.forEach(error => showNotification(error, 'error'));
+                return;
+            }
+
+            // Simulate form submission
+            showNotification('Message sent successfully! We\'ll be in touch soon.', 'success');
+            this.reset();
+        });
+
+        // FAQ Toggle Function
+        function toggleFaq(index) {
+            const faqAnswers = document.querySelectorAll('.faq-answer');
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            // Close all other FAQs
+            faqAnswers.forEach((answer, i) => {
+                if (i !== index) {
+                    answer.classList.remove('active');
+                    faqQuestions[i].querySelector('.faq-toggle').textContent = '+';
+                }
+            });
+
+            // Toggle current FAQ
+            faqAnswers[index].classList.toggle('active');
+            const toggle = faqQuestions[index].querySelector('.faq-toggle');
+            toggle.textContent = faqAnswers[index].classList.contains('active') ? '−' : '+';
+        }
+    </script>
+</body>
+</html>

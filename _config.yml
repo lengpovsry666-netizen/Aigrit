@@ -1,0 +1,64 @@
+# GitHub Pages Configuration for Aigrit
+site: Aigrit
+title: Aigrit - AI Autonomous Drone Delivery Bread
+description: Premium bread retail with AI autonomous drone delivery in Phnom Penh, Cambodia
+author: Leng Peou Sry
+
+# Repository settings
+baseurl: /aigrit
+url: https://lengpovsry.github.io
+
+# GitHub Pages Settings
+theme: null
+markdown: kramdown
+safe: false
+lsi: false
+incremental: false
+
+# Build settings
+encoding: utf-8
+keep_files:
+  - css
+  - js
+  - images
+
+# Excluded files for GitHub Pages build
+exclude:
+  - .gitignore
+  - .git
+  - README.md
+  - QUICK_START.md
+  - PROJECT_SUMMARY.md
+  - COMPLETION_REPORT.txt
+  - TEXT_CONTRAST_IMPROVEMENTS.md
+  - GITHUB_PAGES_GUIDE.md
+  - node_modules/
+  - vendor/
+  - "*.md"
+
+# Include files
+include:
+  - .htaccess
+
+# Server settings for local testing
+server: true
+watch: true
+
+# Output settings
+source: .
+destination: _site
+collections_dir: _collections
+layouts_dir: _layouts
+data_dir: _data
+includes_dir: _includes
+
+# Plugins (GitHub Pages compatible)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO and Accessibility
+lang: en
+locale: en_US
+permalink: pretty

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aigrit - AI Autonomous Drone Delivery for Premium Bread & Bakery Products">
+    <meta name="keywords" content="bread, bakery, delivery, drone, AI, autonomous, Cambodia">
+    <title>Aigrit - AI Drone Delivery Bread Retail</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <div class="logo" style="position: relative; display: flex; align-items: center; gap: 1rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60" style="animation: float 3s ease-in-out infinite; flex-shrink: 0;">
+                        <!-- Earth sphere -->
+                        <defs>
+                            <radialGradient id="earthGradient" cx="35%" cy="35%">
+                                <stop offset="0%" style="stop-color:#4A9FD8;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#2E5F8A;stop-opacity:1" />
+                            </radialGradient>
+                            <style>
+                                @keyframes float {
+                                    0%, 100% { transform: translateY(0px); }
+                                    50% { transform: translateY(-20px); }
+                                }
+                            </style>
+                        </defs>
+                        <!-- Main sphere -->
+                        <circle cx="50" cy="50" r="48" fill="url(#earthGradient)" stroke="#1a3a52" stroke-width="2"/>
+                        <!-- Land masses (simplified) -->
+                        <path d="M 30 40 Q 35 35 45 38 T 55 42 Q 50 48 45 50 Q 35 48 30 40" fill="#2D7D34" opacity="0.8"/>
+                        <path d="M 60 55 Q 70 52 75 60 Q 70 70 65 68 Q 60 65 60 55" fill="#2D7D34" opacity="0.8"/>
+                        <!-- Clouds -->
+                        <ellipse cx="40" cy="30" rx="12" ry="8" fill="white" opacity="0.3"/>
+                        <ellipse cx="70" cy="45" rx="10" ry="6" fill="white" opacity="0.2"/>
+                        <!-- Shine/highlight -->
+                        <ellipse cx="35" cy="35" rx="15" ry="20" fill="white" opacity="0.15"/>
+                    </svg>
+                    <div>
+                        <h1>Aigrit</h1>
+                        <p class="tagline">AI Drone Bakery Delivery</p>
+                    </div>
+                </div>
+            </a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/products.html">Products</a></li>
+                <li><a href="pages/services.html">Services</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Aigrit</h1>
+            <p>Experience the Future of Bread Delivery with AI-Powered Autonomous Drones</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="window.location.href='pages/services.html'">Order Now</button>
+                <button class="btn btn-secondary" onclick="window.location.href='pages/about.html'">Learn More</button>
+            </div>
+        </div>
+        <div class="hero-right">
+            <!-- Floating Racing Drone -->
+            <div class="floating-drone-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180" width="120" height="120" class="floating-drone">
+                    <!-- Sleek Fuselage (Narrow Fast Body) -->
+                    <ellipse cx="100" cy="90" rx="12" ry="35" fill="#FF6B35" stroke="#1a1a1a" stroke-width="2"/>
+                    
+                    <!-- Speed Stripes -->
+                    <rect x="92" y="75" width="16" height="2" fill="#D4A373" opacity="0.8"/>
+                    <rect x="92" y="90" width="16" height="2" fill="#D4A373" opacity="0.8"/>
+                    <rect x="92" y="105" width="16" height="2" fill="#D4A373" opacity="0.8"/>
+                    
+                    <!-- Front Nose Cone -->
+                    <polygon points="100,55 95,60 105,60" fill="#1a1a1a" stroke="#FF6B35" stroke-width="1.5"/>
+                    
+                    <!-- Left Wing (Delta Style) -->
+                    <polygon points="100,80 60,85 65,100 100,95" fill="#2C1810" stroke="#FF6B35" stroke-width="1.5" opacity="0.9"/>
+                    <!-- Right Wing (Delta Style) -->
+                    <polygon points="100,80 140,85 135,100 100,95" fill="#2C1810" stroke="#FF6B35" stroke-width="1.5" opacity="0.9"/>
+                    
+                    <!-- Left Motor Arm (Sleek) -->
+                    <line x1="95" y1="85" x2="50" y2="70" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round"/>
+                    <!-- Right Motor Arm (Sleek) -->
+                    <line x1="105" y1="85" x2="150" y2="70" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round"/>
+                    <!-- Rear Left Motor Arm -->
+                    <line x1="95" y1="105" x2="50" y2="130" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round"/>
+                    <!-- Rear Right Motor Arm -->
+                    <line x1="105" y1="105" x2="150" y2="130" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round"/>
+                    
+                    <!-- Motor Pod Front Left -->
+                    <circle cx="50" cy="70" r="8" fill="#FF6B35" stroke="#1a1a1a" stroke-width="2"/>
+                    <circle cx="50" cy="70" r="5" fill="#D4A373"/>
+                    <!-- Motor Pod Front Right -->
+                    <circle cx="150" cy="70" r="8" fill="#FF6B35" stroke="#1a1a1a" stroke-width="2"/>
+                    <circle cx="150" cy="70" r="5" fill="#D4A373"/>
+                    <!-- Motor Pod Rear Left -->
+                    <circle cx="50" cy="130" r="8" fill="#FF6B35" stroke="#1a1a1a" stroke-width="2"/>
+                    <circle cx="50" cy="130" r="5" fill="#D4A373"/>
+                    <!-- Motor Pod Rear Right -->
+                    <circle cx="150" cy="130" r="8" fill="#FF6B35" stroke="#1a1a1a" stroke-width="2"/>
+                    <circle cx="150" cy="130" r="5" fill="#D4A373"/>
+                    
+                    <!-- Front Left Propeller (Racing Style - Thin Blades) -->
+                    <g style="animation: spin-propeller 1s linear infinite;">
+                        <ellipse cx="50" cy="70" rx="15" ry="3" fill="#1a1a1a" stroke="#FF6B35" stroke-width="1"/>
+                        <ellipse cx="50" cy="70" rx="3" ry="15" fill="#1a1a1a" stroke="#FF6B35" stroke-width="1"/>
+                    </g>
+                    <!-- Front Right Propeller -->
+                    <g style="animation: spin-propeller 1s linear infinite reverse;">
+                        <ellipse cx="150" cy="70" rx="15" ry="3" fill="#1a1a1a" stroke="#FF6B35" stroke-width="1"/>
+                        <ellipse cx="150" cy="70" rx="3" ry="15" fill="#1a1a1a" stroke="#FF6B35" stroke-width="1"/>
+                    </g>
+                    <!-- Rear Left Propeller -->
+                    <g style="animation: spin-propeller 1s linear infinite reverse;">
+                        <ellipse cx="50" cy="130" rx="15" ry="3" fill="#1a1a1a" stroke="#FF6B35" stroke-width="1"/>
+                        <ellipse cx="50" cy="130" rx="3" ry="15" fill="#1a1a1a" stroke="#FF6B35" stroke-width="1"/>
+                    </g>
+                    <!-- Rear Right Propeller -->
+                    <g style="animation: spin-propeller 1s linear infinite;">
+                        <ellipse cx="150" cy="130" rx="15" ry="3" fill="#1a1a1a" stroke="#FF6B35" stroke-width="1"/>
+                        <ellipse cx="150" cy="130" rx="3" ry="15" fill="#1a1a1a" stroke="#FF6B35" stroke-width="1"/>
+                    </g>
+                    
+                    <!-- Front Camera (Racing) -->
+                    <circle cx="100" cy="62" r="4" fill="#D4A373" stroke="#1a1a1a" stroke-width="1.5"/>
+                    <circle cx="100" cy="62" r="2" fill="#1a1a1a"/>
+                    
+                    <!-- Racing Lights Left -->
+                    <circle cx="97" cy="70" r="2.5" fill="#FF6B35" opacity="0.9"/>
+                    <!-- Racing Lights Right -->
+                    <circle cx="103" cy="70" r="2.5" fill="#FF6B35" opacity="0.9"/>
+                    
+                    <!-- Rear Fin Left -->
+                    <polygon points="95,115 90,120 92,130" fill="#2C1810" stroke="#1a1a1a" stroke-width="1"/>
+                    <!-- Rear Fin Right -->
+                    <polygon points="105,115 110,120 108,130" fill="#2C1810" stroke="#1a1a1a" stroke-width="1"/>
+                    
+                    <!-- Speed Lines (Visual Effect) -->
+                    <line x1="98" y1="125" x2="98" y2="145" stroke="#FF6B35" stroke-width="1" opacity="0.5"/>
+                    <line x1="102" y1="125" x2="102" y2="145" stroke="#FF6B35" stroke-width="1" opacity="0.5"/>
+                </svg>
+                
+                <!-- Cloud Left -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60" width="70" height="42" class="floating-cloud cloud-left" style="animation: float-cloud-left 6s ease-in-out infinite;">
+                    <g fill="white" opacity="0.85">
+                        <ellipse cx="20" cy="35" rx="18" ry="15"/>
+                        <ellipse cx="40" cy="25" rx="22" ry="18"/>
+                        <ellipse cx="65" cy="32" rx="20" ry="16"/>
+                        <ellipse cx="50" cy="45" rx="18" ry="12"/>
+                    </g>
+                </svg>
+                
+                <!-- Cloud Right -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60" width="70" height="42" class="floating-cloud cloud-right" style="animation: float-cloud-right 6s ease-in-out infinite;">
+                    <g fill="white" opacity="0.85">
+                        <ellipse cx="20" cy="35" rx="18" ry="15"/>
+                        <ellipse cx="40" cy="25" rx="22" ry="18"/>
+                        <ellipse cx="65" cy="32" rx="20" ry="16"/>
+                        <ellipse cx="50" cy="45" rx="18" ry="12"/>
+                    </g>
+                </svg>
+                
+                <!-- Cloud Top -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60" width="70" height="42" class="floating-cloud cloud-top" style="animation: float-cloud-top 7s ease-in-out infinite;">
+                    <g fill="white" opacity="0.85">
+                        <ellipse cx="20" cy="35" rx="18" ry="15"/>
+                        <ellipse cx="40" cy="25" rx="22" ry="18"/>
+                        <ellipse cx="65" cy="32" rx="20" ry="16"/>
+                        <ellipse cx="50" cy="45" rx="18" ry="12"/>
+                    </g>
+                </svg>
+            </div>
+            <!-- Cubes Below Drone -->
+            <div class="cubes-container">
+                <!-- Cube 1 -->
+                <div class="cube">
+                    <div class="cube-face cube-front">Ai</div>
+                    <div class="cube-face cube-back">Ai</div>
+                    <div class="cube-face cube-right">Ai</div>
+                    <div class="cube-face cube-left">Ai</div>
+                    <div class="cube-face cube-top">Ai</div>
+                    <div class="cube-face cube-bottom">Ai</div>
+                </div>
+                <!-- Cube 2 -->
+                <div class="cube">
+                    <div class="cube-face cube-front">gr</div>
+                    <div class="cube-face cube-back">gr</div>
+                    <div class="cube-face cube-right">gr</div>
+                    <div class="cube-face cube-left">gr</div>
+                    <div class="cube-face cube-top">gr</div>
+                    <div class="cube-face cube-bottom">gr</div>
+                </div>
+                <!-- Cube 3 -->
+                <div class="cube">
+                    <div class="cube-face cube-front">it</div>
+                    <div class="cube-face cube-back">it</div>
+                    <div class="cube-face cube-right">it</div>
+                    <div class="cube-face cube-left">it</div>
+                    <div class="cube-face cube-top">it</div>
+                    <div class="cube-face cube-bottom">it</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2 style="color: white;">Why Choose Aigrit?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>AI Powered</h3>
+                <p>Advanced artificial intelligence ensures optimal delivery routes and real-time tracking</p>
+            </div>
+            <div class="feature-card">
+                <h3>Autonomous Drones</h3>
+                <p>State-of-the-art autonomous delivery system for fast and reliable service</p>
+            </div>
+            <div class="feature-card">
+                <h3>Fresh Bread</h3>
+                <p>Daily baked premium quality bread delivered fresh to your doorstep</p>
+            </div>
+            <div class="feature-card">
+                <h3>Fast Delivery</h3>
+                <p>30-minute guaranteed delivery across Phnom Penh</p>
+            </div>
+            <div class="feature-card">
+                <h3>Eco-Friendly</h3>
+                <p>Zero-emission autonomous drones reduce carbon footprint</p>
+            </div>
+            <div class="feature-card">
+                <h3>Easy Payment</h3>
+                <p>Secure online payment options with multiple payment methods</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="technology">
+        <div class="tech-content">
+            <h2>Cutting-Edge Technology</h2>
+            <p>Our AI-powered autonomous drones utilize machine learning algorithms to optimize delivery routes, predict demand patterns, and ensure every loaf of bread arrives perfectly fresh.</p>
+            <div class="tech-features">
+                <div class="tech-item">
+                    <h4>Real-time GPS Tracking</h4>
+                    <p>Track your delivery live from our app</p>
+                </div>
+                <div class="tech-item">
+                    <h4>AI Route Optimization</h4>
+                    <p>Fastest delivery routes calculated instantly</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Predictive Analytics</h4>
+                    <p>Anticipate demand and stock accordingly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Info Section -->
+    <section class="company-info">
+        <h2>About Aigrit</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Leadership</h3>
+                <p><strong>CEO & Founder:</strong> Leng Peou Sry</p>
+                <p>Visionary leader bringing innovation to the bread retail sector with autonomous delivery technology.</p>
+            </div>
+            <div class="info-card">
+                <h3>Location</h3>
+                <p><strong>Headquarters:</strong> Phnom Penh, Cambodia</p>
+                <p>Serving the greater Phnom Penh area with AI-powered drone delivery service.</p>
+            </div>
+            <div class="info-card">
+                <h3>Contact Us</h3>
+                <p><strong>Phone:</strong> <a href="tel:+855994997046">099 499 7046</a></p>
+                <p><strong>Email:</strong> <a href="mailto:lengpovsry666@gmail.com">lengpovsry666@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <h2>Ready for the Future of Bread Delivery?</h2>
+        <p>Join thousands of satisfied customers enjoying fresh bread delivered by autonomous drones</p>
+        <button class="btn btn-primary btn-large" onclick="window.location.href='pages/contact.html'">Get Started Today</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Aigrit</h4>
+                <p>AI Autonomous Drone Delivery for Premium Bread</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="pages/products.html">Products</a></li>
+                    <li><a href="pages/services.html">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Phone: <a href="tel:+855994997046">099 499 7046</a></p>
+                <p>Email: <a href="mailto:lengpovsry666@gmail.com">lengpovsry666@gmail.com</a></p>
+                <p>Location: Phnom Penh, Cambodia</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/L.P.Sry" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="perspective: 1000px; display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: linear-gradient(135deg, #1877F2, #0A66C2); border-radius: 8px; color: white; font-weight: bold; font-size: 1.5rem; transform-style: preserve-3d; animation: rotate-facebook 8s infinite linear; box-shadow: 0 8px 20px rgba(24, 119, 242, 0.3);">f</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aigrit. All rights reserved. | CEO & Founder: Leng Peou Sry</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

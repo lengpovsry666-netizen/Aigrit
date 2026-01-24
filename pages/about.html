@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Aigrit - AI Autonomous Drone Delivery for Bread">
+    <title>About Aigrit - Our Story & Mission</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" style="text-decoration: none; color: inherit;">
+                <div class="logo" style="position: relative; display: flex; align-items: center; gap: 1rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60" style="animation: float 3s ease-in-out infinite; flex-shrink: 0;">
+                        <!-- Earth sphere -->
+                        <defs>
+                            <radialGradient id="earthGradient" cx="35%" cy="35%">
+                                <stop offset="0%" style="stop-color:#4A9FD8;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#2E5F8A;stop-opacity:1" />
+                            </radialGradient>
+                            <style>
+                                @keyframes float {
+                                    0%, 100% { transform: translateY(0px); }
+                                    50% { transform: translateY(-20px); }
+                                }
+                            </style>
+                        </defs>
+                        <!-- Main sphere -->
+                        <circle cx="50" cy="50" r="48" fill="url(#earthGradient)" stroke="#1a3a52" stroke-width="2"/>
+                        <!-- Land masses (simplified) -->
+                        <path d="M 30 40 Q 35 35 45 38 T 55 42 Q 50 48 45 50 Q 35 48 30 40" fill="#2D7D34" opacity="0.8"/>
+                        <path d="M 60 55 Q 70 52 75 60 Q 70 70 65 68 Q 60 65 60 55" fill="#2D7D34" opacity="0.8"/>
+                        <!-- Clouds -->
+                        <ellipse cx="40" cy="30" rx="12" ry="8" fill="white" opacity="0.3"/>
+                        <ellipse cx="70" cy="45" rx="10" ry="6" fill="white" opacity="0.2"/>
+                        <!-- Shine/highlight -->
+                        <ellipse cx="35" cy="35" rx="15" ry="20" fill="white" opacity="0.15"/>
+                    </svg>
+                    <div>
+                        <h1>Aigrit</h1>
+                        <p class="tagline">AI Drone Bakery Delivery</p>
+                    </div>
+                </div>
+            </a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(135deg, #2C1810 0%, #3D2416 100%); min-height: 400px; grid-template-columns: 1fr;">
+        <div class="hero-content">
+            <h1>About Aigrit</h1>
+            <p>Revolutionizing Bread Delivery with AI and Autonomous Technology</p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="features" style="background-color: white; padding: 5rem 2rem;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="color: #2C1810; margin-bottom: 2rem;">Our Mission & Vision</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+                <div>
+                    <h3 style="color: #D4A373; margin-bottom: 1rem; font-size: 1.5rem;">Mission</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #333;">
+                        To deliver fresh, premium quality bread to every household in Phnom Penh using innovative AI autonomous drone technology. We believe in making quality bakery products accessible, affordable, and delivered with uncompromising freshness.
+                    </p>
+                </div>
+                <div>
+                    <h3 style="color: #D4A373; margin-bottom: 1rem; font-size: 1.5rem;">Vision</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #333;">
+                        To become Southeast Asia's leading AI-powered autonomous delivery platform for artisan bread and bakery products, setting new standards for sustainability, speed, and customer experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Info -->
+    <section class="company-info">
+        <h2>Leadership</h2>
+        <div class="info-grid">
+            <div class="info-card" style="grid-column: span 1;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: white;">CEO & Founder</h3>
+                <p style="font-size: 1.2rem; color: #D4A373; font-weight: 600;">Leng Peou Sry</p>
+                <p style="margin-top: 1rem; color: #FF6B35; font-weight: 500;">
+                    A visionary entrepreneur with a passion for technology and sustainable business solutions. Leng Peou Sry founded Aigrit to transform the way people access quality bread products through cutting-edge AI and autonomous delivery systems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section style="padding: 5rem 2rem; background: linear-gradient(135deg, #FFF8F3, white);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="section-title" style="color: #2C1810;">Our Core Values</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 style="color: white;">Innovation</h3>
+                    <p style="color: white; font-weight: 500;">Constantly pushing boundaries to deliver cutting-edge autonomous delivery solutions</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="color: white;">Sustainability</h3>
+                    <p style="color: white;">Zero-emission drone deliveries for a cleaner, greener future</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="color: white;">Customer First</h3>
+                    <p style="color: white;">Every decision revolves around delivering exceptional customer experience</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="color: white;">Quality</h3>
+                    <p style="color: white;">Ensuring only the freshest, highest quality bread reaches your table</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="color: white;">Community</h3>
+                    <p style="color: white;">Building strong relationships with local bakers and communities</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="color: white;">Reliability</h3>
+                    <p style="color: white;">Dependable service you can count on, every single time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section style="padding: 5rem 2rem; background: linear-gradient(135deg, #2C1810, #3D2416); color: white;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 3rem; color: #D4A373;">Dedicated Team</h2>
+            <div style="text-align: center; background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 12px; border-left: 4px solid #D4A373;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">A team of passionate innovators</h3>
+                <p style="font-size: 1.1rem; opacity: 0.9;">
+                    Our team consists of expert engineers, drone technicians, AI specialists, and business professionals dedicated to revolutionizing bread delivery. Each member brings unique expertise and a shared vision of making fresh bread accessible to everyone.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="cta">
+        <h2>Join the Bread Revolution</h2>
+        <p>Be part of the future of delivery technology</p>
+        <button class="btn btn-primary btn-large" onclick="window.location.href='contact.html'">Get in Touch</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Aigrit</h4>
+                <p>AI Autonomous Drone Delivery for Premium Bread</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Phone: <a href="tel:+855994997046">099 499 7046</a></p>
+                <p>Email: <a href="mailto:lengpovsry666@gmail.com">lengpovsry666@gmail.com</a></p>
+                <p>Location: Phnom Penh, Cambodia</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/L.P.Sry" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="perspective: 1000px; display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: linear-gradient(135deg, #1877F2, #0A66C2); border-radius: 8px; color: white; font-weight: bold; font-size: 1.5rem; transform-style: preserve-3d; animation: rotate-facebook 8s infinite linear; box-shadow: 0 8px 20px rgba(24, 119, 242, 0.3);">f</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aigrit. All rights reserved. | CEO & Founder: Leng Peou Sry</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
